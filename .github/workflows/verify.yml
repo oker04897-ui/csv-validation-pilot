@@ -1,0 +1,139 @@
+name: Verify CSV validation on Ubuntu 22.04
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Ubuntu 22.04 / Python ${{ matrix.python-version }}
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        python-version: ["3.10", "3.12"]
+    env:
+      PYTHONUTF8: "1"
+      EXPECTED_PYTHON: ${{ matrix.python-version }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Assert the actual OS and record the runtime
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          import platform
+          import sys
+          from pathlib import Path
+
+          release = dict(
+              line.split("=", 1)
+              for line in Path("/etc/os-release").read_text().splitlines()
+              if "=" in line
+          )
+          release = {key: value.strip('"') for key, value in release.items()}
+          assert release.get("ID") == "ubuntu", release
+          assert release.get("VERSION_ID") == "22.04", release
+          assert platform.python_version().startswith(os.environ["EXPECTED_PYTHON"] + ".")
+          source_hash = hashlib.sha256(Path("csv_validate.py").read_bytes()).hexdigest()
+          evidence = {
+              "os": release["PRETTY_NAME"],
+              "version_id": release["VERSION_ID"],
+              "python": platform.python_version(),
+              "interpreter": sys.executable,
+              "kernel": platform.release(),
+              "source_sha256": source_hash,
+              "git_commit": os.environ["GITHUB_SHA"],
+          }
+          print(json.dumps(evidence, indent=2))
+          with Path(os.environ["GITHUB_ENV"]).open("a") as stream:
+              stream.write("CSV_SOURCE_SHA256=" + source_hash + "\n")
+          with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a") as stream:
+              stream.write("## Actual execution environment\n\n")
+              for key, value in evidence.items():
+                  stream.write("- **{}:** `{}`\n".format(key, value))
+              stream.write("\nSynthetic inputs only; no buyer files or payment are claimed.\n")
+          PY
+
+      - name: Run the existing 17 independent CLI scenarios
+        run: |
+          verification_dir="$(mktemp -d "${RUNNER_TEMP}/csv-validation-XXXXXX")"
+          printf 'CSV_VERIFICATION_REPORT=%s\n' "${verification_dir}/report.json" >> "$GITHUB_ENV"
+          python verification/verify_cli.py \
+            --cli csv_validate.py \
+            --python "$(command -v python)" \
+            --artifacts "${verification_dir}/fixtures" \
+            --report "${verification_dir}/report.json"
+
+      - name: Report and verify the observed acceptance evidence
+        if: ${{ always() }}
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          report_path = os.environ.get("CSV_VERIFICATION_REPORT")
+          if not report_path or not Path(report_path).is_file():
+              message = "Verification did not produce a report; acceptance is not proven."
+              print(message)
+              with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a") as stream:
+                  stream.write("\n## Acceptance evidence\n\n" + message + "\n")
+              raise SystemExit(1)
+
+          report = json.loads(Path(report_path).read_text())
+          evidence = {
+              "passed": report["passed"],
+              "failed": report["failed"],
+              "scenario_count": len(report["results"]),
+              "runtime_observed": report["runtime_observed"],
+              "host_os_release": report["host_os_release"],
+              "started_utc": report["started_utc"],
+              "ended_utc": report["ended_utc"],
+              "cli_sha256_before": report["cli_sha256_before"],
+              "cli_sha256_after": report["cli_sha256_after"],
+              "scenarios": [
+                  {"name": result["name"], "status": result["status"]}
+                  for result in report["results"]
+              ],
+          }
+          print(json.dumps(evidence, indent=2))
+          with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a") as stream:
+              stream.write("\n## Acceptance evidence\n\n")
+              stream.write("**{} / {} scenarios passed; {} failed.**\n\n".format(
+                  report["passed"], len(report["results"]), report["failed"]))
+              stream.write("Source SHA-256: `{}`\n\n".format(report["cli_sha256_after"]))
+              for result in report["results"]:
+                  stream.write("- {}: **{}**\n".format(result["name"], result["status"]))
+
+          release = dict(
+              line.split("=", 1)
+              for line in report["host_os_release"].splitlines() if "=" in line
+          )
+          assert release.get("VERSION_ID", "").strip('"') == "22.04", release
+          assert report["passed"] == 17 and report["failed"] == 0, evidence
+          assert len(report["results"]) == 17, evidence
+          assert all(result["status"] == "pass" for result in report["results"]), evidence
+          actual_hash = hashlib.sha256(Path("csv_validate.py").read_bytes()).hexdigest()
+          assert (report["cli_sha256_before"] == report["cli_sha256_after"]
+                  == os.environ["CSV_SOURCE_SHA256"] == actual_hash), evidence
+          PY
