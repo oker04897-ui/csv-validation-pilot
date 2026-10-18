@@ -1,0 +1,6 @@
+id,email,name
+A001,minji@example.com,김민지
+A001,not-an-email,Invalid!
+A003,,"첫 줄
+둘째 줄"
+A004,yuna@example.com

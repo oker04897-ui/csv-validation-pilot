@@ -1,0 +1,4 @@
+file,row,column,column_index,physical_start,physical_end,code,message
+/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/headers.csv,1,name,3,1,1,duplicate_header,Header occurs more than once
+/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/headers.csv,1,extra,4,1,1,unexpected_header,Header is not configured
+/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/headers.csv,1,email,0,1,1,missing_header,Configured header is missing

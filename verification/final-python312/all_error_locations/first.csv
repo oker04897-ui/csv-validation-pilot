@@ -1,0 +1,8 @@
+id,name,email
+R001,Alice,alice@example.com
+R002,,empty-name@example.com
+bad,Bob,invalid-address
+R003,Eve	Admin,eve@example.com
+R004,"Two
+lines",multiline@example.com
+R005,Kate,kate@example.com

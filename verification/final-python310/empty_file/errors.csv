@@ -1,0 +1,2 @@
+file,row,column,column_index,physical_start,physical_end,code,message
+/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/empty_file/empty.csv,0,,0,0,0,empty_file,File contains no CSV header or data

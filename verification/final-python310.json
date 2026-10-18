@@ -1,0 +1,879 @@
+{
+  "buyer_source": "https://www.freelancer.com/projects/bash/CSV-Data-Validation-Maintenance",
+  "buyer_project_id": 40772594,
+  "fixture_kind": "synthetic; no buyer files received",
+  "started_utc": "2026-10-18T13:16:14.335634+00:00",
+  "ended_utc": "2026-10-18T13:16:14.900583+00:00",
+  "elapsed_seconds": 0.56495,
+  "cli": "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+  "cli_sha256_before": "f147a84ccbe4aff2b6c85d50b9fb5f1c9e6bd1f116174a60754a51cc82907205",
+  "cli_sha256_after": "f147a84ccbe4aff2b6c85d50b9fb5f1c9e6bd1f116174a60754a51cc82907205",
+  "target_python": "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+  "runtime_observed": "3.10.21 (main, Aug 14 2026, 15:33:52) [Clang 22.1.3 ]\nLinux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39\n",
+  "host_platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "host_os_release": "PRETTY_NAME=\"Ubuntu 24.04.1 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.1 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+  "results": [
+    {
+      "name": "valid_batch",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/valid_batch/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/valid_batch/errors.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/valid_batch/one.csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/valid_batch/two.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.337342+00:00",
+          "ended_utc": "2026-10-18T13:16:14.369946+00:00",
+          "exit_code": 0,
+          "stdout": "2 file(s), 2 data row(s), 0 violation(s); report: /home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/valid_batch/errors.csv\n",
+          "stderr": "",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/valid_batch/errors.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/valid_batch/one.csv": "d46ecc204fcdfcc955384ae10072b21bd101fc83880c3a679461a41785f3269c",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/valid_batch/two.csv": "8ca697781822f2e79ea30bb5ca342d9ce8f3af64d5adcf000ef077679551337c",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/valid_batch/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/valid_batch/one.csv": "d46ecc204fcdfcc955384ae10072b21bd101fc83880c3a679461a41785f3269c",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/valid_batch/two.csv": "8ca697781822f2e79ea30bb5ca342d9ce8f3af64d5adcf000ef077679551337c",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/valid_batch/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "observed_findings": []
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "all_error_locations",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/errors.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/first.csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/second.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.371191+00:00",
+          "ended_utc": "2026-10-18T13:16:14.404682+00:00",
+          "exit_code": 1,
+          "stdout": "2 file(s), 8 data row(s), 7 violation(s); report: /home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/errors.csv\n",
+          "stderr": "",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/errors.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/first.csv": "207d59fc729f82243fb648698534b4fcf39f5c4cbc389628576f5b82b3fc80ad",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/second.csv": "b2fb98bc2592745ef862d63a59afe372766be3544df01391c317e1f824eb8baa",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/first.csv": "207d59fc729f82243fb648698534b4fcf39f5c4cbc389628576f5b82b3fc80ad",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/second.csv": "b2fb98bc2592745ef862d63a59afe372766be3544df01391c317e1f824eb8baa",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "observed_findings": [
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/first.csv",
+              "row": "3",
+              "column": "name",
+              "column_index": "2",
+              "physical_start": "3",
+              "physical_end": "3",
+              "code": "missing_value",
+              "message": "Required value is empty or whitespace"
+            },
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/first.csv",
+              "row": "4",
+              "column": "id",
+              "column_index": "1",
+              "physical_start": "4",
+              "physical_end": "4",
+              "code": "pattern",
+              "message": "Value does not fully match configured pattern"
+            },
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/first.csv",
+              "row": "4",
+              "column": "id",
+              "column_index": "1",
+              "physical_start": "4",
+              "physical_end": "4",
+              "code": "forbidden_character",
+              "message": "Disallowed code points: U+0061, U+0062, U+0064"
+            },
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/first.csv",
+              "row": "4",
+              "column": "email",
+              "column_index": "3",
+              "physical_start": "4",
+              "physical_end": "4",
+              "code": "pattern",
+              "message": "Value does not fully match configured pattern"
+            },
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/first.csv",
+              "row": "5",
+              "column": "name",
+              "column_index": "2",
+              "physical_start": "5",
+              "physical_end": "5",
+              "code": "forbidden_character",
+              "message": "Disallowed code points: U+0009"
+            },
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/first.csv",
+              "row": "6",
+              "column": "name",
+              "column_index": "2",
+              "physical_start": "6",
+              "physical_end": "7",
+              "code": "forbidden_newline",
+              "message": "Embedded CR or LF is not allowed"
+            },
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/second.csv",
+              "row": "2",
+              "column": "id",
+              "column_index": "1",
+              "physical_start": "2",
+              "physical_end": "2",
+              "code": "duplicate_key",
+              "message": "Duplicates key (id) first seen at /home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/all_error_locations/first.csv row 2"
+            }
+          ]
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "expected_findings": [
+        [
+          "first.csv",
+          3,
+          "name",
+          2,
+          3,
+          3,
+          "missing_value"
+        ],
+        [
+          "first.csv",
+          4,
+          "email",
+          3,
+          4,
+          4,
+          "pattern"
+        ],
+        [
+          "first.csv",
+          4,
+          "id",
+          1,
+          4,
+          4,
+          "forbidden_character"
+        ],
+        [
+          "first.csv",
+          4,
+          "id",
+          1,
+          4,
+          4,
+          "pattern"
+        ],
+        [
+          "first.csv",
+          5,
+          "name",
+          2,
+          5,
+          5,
+          "forbidden_character"
+        ],
+        [
+          "first.csv",
+          6,
+          "name",
+          2,
+          6,
+          7,
+          "forbidden_newline"
+        ],
+        [
+          "second.csv",
+          2,
+          "id",
+          1,
+          2,
+          2,
+          "duplicate_key"
+        ]
+      ],
+      "status": "pass"
+    },
+    {
+      "name": "markdown_report",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/markdown_report/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/markdown_report/errors.md",
+            "--format",
+            "markdown",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/markdown_report/first.csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/markdown_report/second.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.405856+00:00",
+          "ended_utc": "2026-10-18T13:16:14.438979+00:00",
+          "exit_code": 1,
+          "stdout": "2 file(s), 8 data row(s), 7 violation(s); report: /home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/markdown_report/errors.md\n",
+          "stderr": "",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/markdown_report/errors.md",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/markdown_report/first.csv": "207d59fc729f82243fb648698534b4fcf39f5c4cbc389628576f5b82b3fc80ad",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/markdown_report/second.csv": "b2fb98bc2592745ef862d63a59afe372766be3544df01391c317e1f824eb8baa",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/markdown_report/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/markdown_report/first.csv": "207d59fc729f82243fb648698534b4fcf39f5c4cbc389628576f5b82b3fc80ad",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/markdown_report/second.csv": "b2fb98bc2592745ef862d63a59afe372766be3544df01391c317e1f824eb8baa",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/markdown_report/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          }
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "composite_uniqueness",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/composite_uniqueness/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/composite_uniqueness/errors.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/composite_uniqueness/one.csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/composite_uniqueness/two.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.440453+00:00",
+          "ended_utc": "2026-10-18T13:16:14.472388+00:00",
+          "exit_code": 1,
+          "stdout": "2 file(s), 3 data row(s), 1 violation(s); report: /home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/composite_uniqueness/errors.csv\n",
+          "stderr": "",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/composite_uniqueness/errors.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/composite_uniqueness/one.csv": "182f89493faacf8cdbfbbdf017b25e57ce39867f6dc030fdb2a884e022df8b9f",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/composite_uniqueness/two.csv": "b84cc60232c2b52d275c93a36e8de95c96b78f5fd555d62a62ed1f5456ec1844",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/composite_uniqueness/rules.json": "29f49a34eb8f496a52cfc83c5eeecdf8816c9e2e8db3d9cced4f5771a7f292f6"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/composite_uniqueness/one.csv": "182f89493faacf8cdbfbbdf017b25e57ce39867f6dc030fdb2a884e022df8b9f",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/composite_uniqueness/two.csv": "b84cc60232c2b52d275c93a36e8de95c96b78f5fd555d62a62ed1f5456ec1844",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/composite_uniqueness/rules.json": "29f49a34eb8f496a52cfc83c5eeecdf8816c9e2e8db3d9cced4f5771a7f292f6"
+          },
+          "observed_findings": [
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/composite_uniqueness/two.csv",
+              "row": "2",
+              "column": "id,name",
+              "column_index": "1",
+              "physical_start": "2",
+              "physical_end": "2",
+              "code": "duplicate_key",
+              "message": "Duplicates key (id, name) first seen at /home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/composite_uniqueness/one.csv row 2"
+            }
+          ]
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "header_errors",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/errors.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/headers.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.473728+00:00",
+          "ended_utc": "2026-10-18T13:16:14.503780+00:00",
+          "exit_code": 1,
+          "stdout": "1 file(s), 1 data row(s), 3 violation(s); report: /home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/errors.csv\n",
+          "stderr": "",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/errors.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/headers.csv": "06ec2c45fb282cae04f87963f4e5c7ef8c9beee54040f1c45ec7f6aba4a48100",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/headers.csv": "06ec2c45fb282cae04f87963f4e5c7ef8c9beee54040f1c45ec7f6aba4a48100",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "observed_findings": [
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/headers.csv",
+              "row": "1",
+              "column": "name",
+              "column_index": "3",
+              "physical_start": "1",
+              "physical_end": "1",
+              "code": "duplicate_header",
+              "message": "Header occurs more than once"
+            },
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/headers.csv",
+              "row": "1",
+              "column": "extra",
+              "column_index": "4",
+              "physical_start": "1",
+              "physical_end": "1",
+              "code": "unexpected_header",
+              "message": "Header is not configured"
+            },
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_errors/headers.csv",
+              "row": "1",
+              "column": "email",
+              "column_index": "0",
+              "physical_start": "1",
+              "physical_end": "1",
+              "code": "missing_header",
+              "message": "Configured header is missing"
+            }
+          ]
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "ragged_rows",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/errors.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/ragged.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.505004+00:00",
+          "ended_utc": "2026-10-18T13:16:14.535528+00:00",
+          "exit_code": 1,
+          "stdout": "1 file(s), 2 data row(s), 4 violation(s); report: /home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/errors.csv\n",
+          "stderr": "",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/errors.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/ragged.csv": "c297634cd667f1c7812b1e2d99417a03d7e5a3097f6f2325bafdbf43faf763f2",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/ragged.csv": "c297634cd667f1c7812b1e2d99417a03d7e5a3097f6f2325bafdbf43faf763f2",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "observed_findings": [
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/ragged.csv",
+              "row": "2",
+              "column": "",
+              "column_index": "0",
+              "physical_start": "2",
+              "physical_end": "2",
+              "code": "column_count",
+              "message": "Expected 3 fields, found 2"
+            },
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/ragged.csv",
+              "row": "2",
+              "column": "email",
+              "column_index": "3",
+              "physical_start": "2",
+              "physical_end": "2",
+              "code": "missing_value",
+              "message": "Required value is empty or whitespace"
+            },
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/ragged.csv",
+              "row": "2",
+              "column": "email",
+              "column_index": "3",
+              "physical_start": "2",
+              "physical_end": "2",
+              "code": "pattern",
+              "message": "Value does not fully match configured pattern"
+            },
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/ragged.csv",
+              "row": "3",
+              "column": "",
+              "column_index": "0",
+              "physical_start": "3",
+              "physical_end": "3",
+              "code": "column_count",
+              "message": "Expected 3 fields, found 4"
+            }
+          ]
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "empty_file",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/empty_file/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/empty_file/errors.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/empty_file/empty.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.536725+00:00",
+          "ended_utc": "2026-10-18T13:16:14.567447+00:00",
+          "exit_code": 1,
+          "stdout": "1 file(s), 0 data row(s), 1 violation(s); report: /home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/empty_file/errors.csv\n",
+          "stderr": "",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/empty_file/errors.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/empty_file/empty.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/empty_file/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/empty_file/empty.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/empty_file/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "observed_findings": [
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/empty_file/empty.csv",
+              "row": "0",
+              "column": "",
+              "column_index": "0",
+              "physical_start": "0",
+              "physical_end": "0",
+              "code": "empty_file",
+              "message": "File contains no CSV header or data"
+            }
+          ]
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "header_only",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_only/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_only/errors.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_only/headers-only.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.568786+00:00",
+          "ended_utc": "2026-10-18T13:16:14.599428+00:00",
+          "exit_code": 1,
+          "stdout": "1 file(s), 0 data row(s), 1 violation(s); report: /home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_only/errors.csv\n",
+          "stderr": "",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_only/errors.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_only/headers-only.csv": "99328a28d140fd92594e903f4e2d2bc486c91cb2d49118ada55acbb7b4d783aa",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_only/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_only/headers-only.csv": "99328a28d140fd92594e903f4e2d2bc486c91cb2d49118ada55acbb7b4d783aa",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_only/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "observed_findings": [
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/header_only/headers-only.csv",
+              "row": "1",
+              "column": "",
+              "column_index": "0",
+              "physical_start": "1",
+              "physical_end": "1",
+              "code": "no_data",
+              "message": "File has a header but no data rows"
+            }
+          ]
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "malformed_csv",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/malformed_csv/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/malformed_csv/errors.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/malformed_csv/malformed.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.600632+00:00",
+          "ended_utc": "2026-10-18T13:16:14.630374+00:00",
+          "exit_code": 1,
+          "stdout": "1 file(s), 0 data row(s), 2 violation(s); report: /home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/malformed_csv/errors.csv\n",
+          "stderr": "",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/malformed_csv/errors.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/malformed_csv/malformed.csv": "ef0fb517f328f5aa73e036a30ecd1e1f3601b9ae04725653b08677935e265a79",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/malformed_csv/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/malformed_csv/malformed.csv": "ef0fb517f328f5aa73e036a30ecd1e1f3601b9ae04725653b08677935e265a79",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/malformed_csv/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "observed_findings": [
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/malformed_csv/malformed.csv",
+              "row": "2",
+              "column": "",
+              "column_index": "0",
+              "physical_start": "2",
+              "physical_end": "2",
+              "code": "csv_syntax",
+              "message": "unexpected end of data"
+            },
+            {
+              "file": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/malformed_csv/malformed.csv",
+              "row": "1",
+              "column": "",
+              "column_index": "0",
+              "physical_start": "1",
+              "physical_end": "1",
+              "code": "no_data",
+              "message": "File has a header but no data rows"
+            }
+          ]
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "semicolon_config",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/semicolon_config/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/semicolon_config/errors.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/semicolon_config/semicolon.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.631684+00:00",
+          "ended_utc": "2026-10-18T13:16:14.660566+00:00",
+          "exit_code": 0,
+          "stdout": "1 file(s), 1 data row(s), 0 violation(s); report: /home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/semicolon_config/errors.csv\n",
+          "stderr": "",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/semicolon_config/errors.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/semicolon_config/semicolon.csv": "caad00d2c281c4dc7e759867cdd1b70ee8eddb6bb72f32850e1a06dab9dcfa43",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/semicolon_config/rules.json": "913b9e2ac4e305dd39e9a8c52e49b1b78284b3b8ac75a93f4c7efaaa67b93e84"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/semicolon_config/semicolon.csv": "caad00d2c281c4dc7e759867cdd1b70ee8eddb6bb72f32850e1a06dab9dcfa43",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/semicolon_config/rules.json": "913b9e2ac4e305dd39e9a8c52e49b1b78284b3b8ac75a93f4c7efaaa67b93e84"
+          },
+          "observed_findings": []
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "missing_input",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/missing_input/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/missing_input/errors.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/missing_input/not-present.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.661667+00:00",
+          "ended_utc": "2026-10-18T13:16:14.690544+00:00",
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "csv-validate: [Errno 2] No such file or directory: '/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/missing_input/not-present.csv'\n",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/missing_input/errors.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/missing_input/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/missing_input/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          }
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "bad_schema_json",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_json/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_json/errors.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_json/input.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.691649+00:00",
+          "ended_utc": "2026-10-18T13:16:14.721485+00:00",
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "csv-validate: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_json/errors.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_json/input.csv": "d46ecc204fcdfcc955384ae10072b21bd101fc83880c3a679461a41785f3269c",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_json/rules.json": "be302461cda285db3ed2d45fb767b23e08ca8808b35a638009937df22b332d73"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_json/input.csv": "d46ecc204fcdfcc955384ae10072b21bd101fc83880c3a679461a41785f3269c",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_json/rules.json": "be302461cda285db3ed2d45fb767b23e08ca8808b35a638009937df22b332d73"
+          }
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "bad_schema_regex",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_regex/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_regex/errors.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_regex/input.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.722701+00:00",
+          "ended_utc": "2026-10-18T13:16:14.752659+00:00",
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "csv-validate: fields[0].pattern: unterminated character set at position 0\n",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_regex/errors.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_regex/input.csv": "d46ecc204fcdfcc955384ae10072b21bd101fc83880c3a679461a41785f3269c",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_regex/rules.json": "d27c45e6f19287d3c5adb7f218cb09d9a3b99ea2b02015b8a4f5a2904d5c5abe"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_regex/input.csv": "d46ecc204fcdfcc955384ae10072b21bd101fc83880c3a679461a41785f3269c",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/bad_schema_regex/rules.json": "d27c45e6f19287d3c5adb7f218cb09d9a3b99ea2b02015b8a4f5a2904d5c5abe"
+          }
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "existing_report",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/existing_report/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/existing_report/errors.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/existing_report/missing-input.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.753908+00:00",
+          "ended_utc": "2026-10-18T13:16:14.783951+00:00",
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "csv-validate: [Errno 2] No such file or directory: '/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/existing_report/missing-input.csv'\n",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/existing_report/errors.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/existing_report/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/existing_report/errors.csv": "e97cf84096e8c44b448cc11efcb6060eb6c22fa4c60fcc74ba7d4a870ef82d32"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/existing_report/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/existing_report/errors.csv": "e97cf84096e8c44b448cc11efcb6060eb6c22fa4c60fcc74ba7d4a870ef82d32"
+          }
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "atomic_report_replace",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/atomic_report_replace/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/atomic_report_replace/errors.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/atomic_report_replace/input.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.785144+00:00",
+          "ended_utc": "2026-10-18T13:16:14.815811+00:00",
+          "exit_code": 0,
+          "stdout": "1 file(s), 1 data row(s), 0 violation(s); report: /home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/atomic_report_replace/errors.csv\n",
+          "stderr": "",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/atomic_report_replace/errors.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/atomic_report_replace/input.csv": "d46ecc204fcdfcc955384ae10072b21bd101fc83880c3a679461a41785f3269c",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/atomic_report_replace/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/atomic_report_replace/input.csv": "d46ecc204fcdfcc955384ae10072b21bd101fc83880c3a679461a41785f3269c",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/atomic_report_replace/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "observed_findings": []
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "report_is_input",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_input/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_input/input.csv",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_input/input.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.817084+00:00",
+          "ended_utc": "2026-10-18T13:16:14.845478+00:00",
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "csv-validate: Report must not overwrite an input or the schema\n",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_input/input.csv",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_input/input.csv": "d46ecc204fcdfcc955384ae10072b21bd101fc83880c3a679461a41785f3269c",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_input/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_input/input.csv": "d46ecc204fcdfcc955384ae10072b21bd101fc83880c3a679461a41785f3269c",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_input/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          }
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    },
+    {
+      "name": "report_is_schema",
+      "calls": [
+        {
+          "command": [
+            "/home/csh/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/bin/python3.10",
+            "/home/csh/30projects/deliverables/csv-validation-service/csv_validate.py",
+            "--schema",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_schema/rules.json",
+            "--report",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_schema/rules.json",
+            "--format",
+            "csv",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_schema/input.csv"
+          ],
+          "started_utc": "2026-10-18T13:16:14.846634+00:00",
+          "ended_utc": "2026-10-18T13:16:14.876044+00:00",
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "csv-validate: Report must not overwrite an input or the schema\n",
+          "report": "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_schema/rules.json",
+          "before_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_schema/input.csv": "d46ecc204fcdfcc955384ae10072b21bd101fc83880c3a679461a41785f3269c",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_schema/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          },
+          "after_sha256": {
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_schema/input.csv": "d46ecc204fcdfcc955384ae10072b21bd101fc83880c3a679461a41785f3269c",
+            "/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/report_is_schema/rules.json": "aa0a21e00c72b6e4dd8655c264a7914fc35952bd7111c59fb76cc01df8289981"
+          }
+        }
+      ],
+      "fixture_kind": "synthetic",
+      "status": "pass"
+    }
+  ],
+  "passed": 17,
+  "failed": 0
+}

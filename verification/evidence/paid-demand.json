@@ -1,0 +1,89 @@
+[
+  {
+    "id": 40772594,
+    "title": "CSV Data Validation Maintenance",
+    "status": "active",
+    "frontend_project_status": "open",
+    "type": "hourly",
+    "budget": {
+      "minimum": 750.0,
+      "maximum": 1250.0,
+      "name": null,
+      "project_type": null,
+      "currency_id": null
+    },
+    "time_submitted": 1792228822,
+    "attachments": [],
+    "owner_id": null,
+    "active_prepaid_milestone": null,
+    "is_seller_kyc_required": false,
+    "is_buyer_kyc_required": false,
+    "hourly_project_info": {
+      "commitment": {
+        "hours": 40,
+        "interval": "week"
+      },
+      "duration_enum": "unspecified"
+    },
+    "currency": "INR",
+    "bid_count": 47,
+    "url": "https://www.freelancer.com/api/projects/0.1/projects/40772594/?full_description=true&attachment_details=true",
+    "confirmed_utc": "2026-10-18T13:11:20.811606+00:00",
+    "response_sha256": "d35a96d85093d53416c6dee27953dcc0c7fc80d0b1ec149c1f4c57866dd9eff0",
+    "description_sha256": "5020d1ec87739621dec6e864a9c7d404c3736020451c02c03ac1a0c6fea895a5"
+  },
+  {
+    "id": 40772420,
+    "title": "Advanced Python Data Transformation Tool",
+    "status": "active",
+    "frontend_project_status": "open",
+    "type": "fixed",
+    "budget": {
+      "minimum": 12500.0,
+      "maximum": 37500.0,
+      "name": null,
+      "project_type": null,
+      "currency_id": null
+    },
+    "time_submitted": 1792219254,
+    "attachments": [],
+    "owner_id": null,
+    "active_prepaid_milestone": null,
+    "is_seller_kyc_required": false,
+    "is_buyer_kyc_required": false,
+    "hourly_project_info": null,
+    "currency": "INR",
+    "bid_count": 75,
+    "url": "https://www.freelancer.com/api/projects/0.1/projects/40772420/?full_description=true&attachment_details=true",
+    "confirmed_utc": "2026-10-18T13:11:21.131785+00:00",
+    "response_sha256": "2c4abe448524f46f9162cc51fc14491b3ef08e34018dc47eca0de1d2d0478f30",
+    "description_sha256": "7c6d550e667f24aca722371a988723323e86902a15c8e39a0a460e8b801b8cd1"
+  },
+  {
+    "id": 40773409,
+    "title": "Electrical Sheet PDF Extractor",
+    "status": "active",
+    "frontend_project_status": "open",
+    "type": "fixed",
+    "budget": {
+      "minimum": 30.0,
+      "maximum": 250.0,
+      "name": null,
+      "project_type": null,
+      "currency_id": null
+    },
+    "time_submitted": 1792273868,
+    "attachments": [],
+    "owner_id": null,
+    "active_prepaid_milestone": null,
+    "is_seller_kyc_required": false,
+    "is_buyer_kyc_required": false,
+    "hourly_project_info": null,
+    "currency": "USD",
+    "bid_count": 207,
+    "url": "https://www.freelancer.com/api/projects/0.1/projects/40773409/?full_description=true&attachment_details=true",
+    "confirmed_utc": "2026-10-18T13:11:21.794520+00:00",
+    "response_sha256": "999f1eb407922700c6ad5f4135fdae33de2945546457d74ee0530181535a620a",
+    "description_sha256": "7fb046c7bf843644d6e646543b36ca88b44710e2f69d224f907288858e5b7516"
+  }
+]

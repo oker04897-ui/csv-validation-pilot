@@ -1,0 +1,2 @@
+file,row,column,column_index,physical_start,physical_end,code,message
+/home/csh/30projects/deliverables/csv-validation-service/verification/final-python312/header_only/headers-only.csv,1,,0,1,1,no_data,File has a header but no data rows

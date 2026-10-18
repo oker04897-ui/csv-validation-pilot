@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "encoding": "utf-8-sig",
+  "delimiter": ",",
+  "allow_extra_columns": false,
+  "allow_empty": false,
+  "fields": [
+    {"name": "id", "required": true, "pattern": "[A-Z][0-9]{3}", "allowed_characters": "[A-Z0-9]"},
+    {"name": "email", "required": true, "pattern": "[^\\s@]+@[^\\s@]+\\.[^\\s@]+"},
+    {"name": "name", "required": true, "allow_newlines": false, "allowed_characters": "[A-Za-z가-힣 ]"}
+  ],
+  "unique_keys": [["id"], ["email"]]
+}

@@ -1,0 +1,5 @@
+file,row,column,column_index,physical_start,physical_end,code,message
+/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/ragged.csv,2,,0,2,2,column_count,"Expected 3 fields, found 2"
+/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/ragged.csv,2,email,3,2,2,missing_value,Required value is empty or whitespace
+/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/ragged.csv,2,email,3,2,2,pattern,Value does not fully match configured pattern
+/home/csh/30projects/deliverables/csv-validation-service/verification/final-python310/ragged_rows/ragged.csv,3,,0,3,3,column_count,"Expected 3 fields, found 4"
